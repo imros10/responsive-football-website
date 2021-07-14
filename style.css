@@ -1,6 +1,6 @@
-/* --------
+/* --------------
 Fonts
-------- -- */
+---------------- */
 
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;700&display=swap');
 
@@ -21,18 +21,27 @@ body{
     font-weight: 500;
     padding: 10px 26px;
     background-color: #E02C6D;
-    color: white;
     transition: background-color .8s;
     cursor: pointer;
 }
+.button a{
+    text-decoration: none;
+    color: white;
+}
 .button:hover{
     background-color: rgb(0, 0, 0);
+}
+.button .fas{
+    transition:  margin-left 1s;
+}
+.button:hover .fas{
+    margin-left: 10px;
+   
 }
 .section-title{
     font-size: 48px;
     line-height: 60px;
    
-  
 margin-bottom: 10px;    
 }
 .section-top{
@@ -40,8 +49,6 @@ display: flex;
 flex-direction: column;
 align-items: center;
 margin-bottom: 30px;
-
-/* justify-content: center; */
 }
 .border-image {
 width: 10%;
@@ -72,9 +79,9 @@ header{
 .header-banner{
     padding: 86px 0px;
     
-    /* transition: all 1s; */
+    
 }
-header:hover .header-banner{
+header:hover .header-banner img{
     animation: animation1 2s ease-in-out  infinite alternate;
     animation-play-state: running;
     position: relative;
@@ -86,19 +93,10 @@ header:hover .header-banner{
 }
 @keyframes animation1 {
     0% {
-        transform: skewX(0deg) scale(1);
+        transform: skewX(0deg);
       }
-      /* 25% {
-        transform: skewX(-30deg) scale(.9);
-      }
-      50%{
-        transform: skewX(0deg);    
-    } 
-    75%{
-        transform: skewX(10deg); 
-    } */
     100%{
-        transform: skewX(-20deg) scale(.8);    
+        transform: skewX(-10deg);    
     }  
 }
 
@@ -107,7 +105,6 @@ Player Section Styles
 ---------------------  */
 main{
     display: flex;
-    /* justify-content: center; */
     flex-direction: column;
     align-items: center;
 }
@@ -298,17 +295,21 @@ footer{
     margin-top: 20px;
     margin-bottom: 60px;
 }
+
+
+/* ---------------------------------
+Responsive design Media query
+--------------------------------- */
+
 @media only screen and (max-width: 688px) {
     .section-title{
         font-size: 30px;
     }
  .container{
-     /* background-color: red; */
      width: 100%;
  }
  .header-area{
      flex-direction: column;
-     /* justify-content: center; */
      align-items: center;
      padding-left: 20px;
      padding-top: 30px;
